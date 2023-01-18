@@ -11,22 +11,22 @@ Para qual unidade de medida deseja converter?
 
 switch (unitOfMeasurement) {
   case "1":
-    alert(`Resultado: ${(valueInMeters = valueInMeters * 1000)} mm`);
+    alert(`Resultado: ${(valueInMeters *= 1000)} mm`);
     break;
   case "2":
-    alert(`Resultado: ${(valueInMeters = valueInMeters * 100)} cm`);
+    alert(`Resultado: ${(valueInMeters *= 100)} cm`);
     break;
   case "3":
-    alert(`Resultado: ${(valueInMeters = valueInMeters * 10)} dm`);
+    alert(`Resultado: ${(valueInMeters *= 10)} dm`);
     break;
   case "4":
-    alert(`Resultado: ${(valueInMeters = valueInMeters / 10)} dam`);
+    alert(`Resultado: ${(valueInMeters /= 10)} dam`);
     break;
   case "5":
-    alert(`Resultado: ${(valueInMeters = valueInMeters / 100)} hm`);
+    alert(`Resultado: ${(valueInMeters /= 100)} hm`);
     break;
   case "6":
-    alert(`Resultado: ${(valueInMeters = valueInMeters / 1000)} km`);
+    alert(`Resultado: ${(valueInMeters /= 1000)} km`);
     break;
   default:
     alert("Opção inválida!");
