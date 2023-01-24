@@ -2,17 +2,16 @@ let imoveis = [];
 let option = "";
 
 do {
-  option = prompt(`    Bem-Vindo(a) ao Cadastro de Imóveis!
-    Quantidade de imoveis: ${imoveis.length}
-    Escolha uma opção:
-    1. Salvar um novo imóvel
-    2. Mostrar todos os imóveis
-    3. Sair`);
+  option = prompt(`Bem-Vindo(a) ao Cadastro de Imóveis! 
+  Quantidade de imoveis: ${imoveis.length}
+  Escolha uma opção:
+  1. Salvar um novo imóvel
+  2. Mostrar todos os imóveis
+  3. Sair`);
 
   switch (option) {
     case "1":
       const imovel = {};
-
       imovel.owner = prompt(`Digite o nome do proprietário: `);
       imovel.bedrooms = prompt(`Digite a quantidade de quartos no imóvel: `);
       imovel.bathrooms = prompt(`Digite a quantidade de banheiros no imóvel: `);
