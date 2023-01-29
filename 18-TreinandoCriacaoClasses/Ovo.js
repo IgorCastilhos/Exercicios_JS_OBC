@@ -1,0 +1,3 @@
+class Ovo {
+  constructor(params) {}
+}
