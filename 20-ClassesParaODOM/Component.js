@@ -1,25 +1,28 @@
-class Component {
-  #reference;
-  constructor(reference) {}
-  readReference(#reference) {}
-  build() {}
-  render() {}
-}
+export class Component {
+  #element = null;
 
-class Input extends Component{
-    super(reference)
-}
+  constructor(tag, parent, options) {
+    this.tag = tag;
+    this.parent = parent;
+    this.options = options;
+    this.build();
+  }
 
-class Label extends Component{
-    constructor(contentInText) {
-        
+  getElement() {
+    return this.#element;
+  }
+
+  build() {
+    this.#element = document.createElement(this.tag);
+    Object.assign(this.#element, this.options);
+    return this;
+  }
+
+  render() {
+    if (this.parent instanceof Component) {
+      this.parent.getElement().append(this.#element);
+    } else {
+      document.querySelector(this.parent).append(this.#element);
     }
-
-}
-
-class Form extends Component{
-    constructor(params) {
-        
-    }
-    addElementAsSon(){}
+  }
 }
