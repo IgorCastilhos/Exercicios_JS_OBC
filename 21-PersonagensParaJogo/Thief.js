@@ -1,7 +1,9 @@
-import { Character } from "./Character";
+const Character = require("./Character");
 
-export class Thief extends Character {
-  constructor() {
-    super(name, lifePoints, attackPoints, defensePoints);
+class Thief extends Character {
+  attack(target) {
+    target.lifePoints -= (this.attackPoints - target.defensePoints) * 2;
   }
 }
+
+module.exports = Thief;

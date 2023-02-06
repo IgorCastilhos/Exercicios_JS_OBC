@@ -1,4 +1,4 @@
-export class Character {
+class Character {
   constructor(name, lifePoints, attackPoints, defensePoints) {
     this.name = name;
     this.lifePoints = lifePoints;
@@ -7,6 +7,8 @@ export class Character {
   }
 
   attack(target) {
-    target.lifePoints -= this.attackPoints;
+    target.lifePoints -= this.attackPoints - target.defensePoints;
   }
 }
+
+module.exports = Character;
